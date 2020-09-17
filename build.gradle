@@ -4,6 +4,10 @@ plugins {
 	id 'java'
 }
 
+ext {
+	buildId = System.currentTimeMillis()
+}
+
 group = 'com.crio'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
