@@ -23,6 +23,18 @@ public class StandardCalculatorTest {
 		});
 	}
 
+	@Test
+	void testAdd(){
+		StandardCalculator calc=new StandardCalculator();
+		calc.add(1,1);
+		assertEquals(2,calc.getResult());
+	}
 
+	@Test
+	void testSubtract(){
+		StandardCalculator calc=new StandardCalculator();
+		calc.subtract(2,2);
+		assertEquals(0,calc.getResult());
+	}
 }
 
