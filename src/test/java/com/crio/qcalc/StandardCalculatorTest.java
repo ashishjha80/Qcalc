@@ -36,5 +36,13 @@ public class StandardCalculatorTest {
 		calc.subtract(2,2);
 		assertEquals(0,calc.getResult());
 	}
+
+	@Test
+	void testResult(){
+		StandardCalculator calc=new StandardCalculator();
+		calc.add(1,1);
+		calc.subtract(3,3);
+		assertEquals(0,calc.getResult());
+	}
 }
 
