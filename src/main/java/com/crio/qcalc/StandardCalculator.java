@@ -2,7 +2,7 @@ package com.crio.qcalc;
 
 public class StandardCalculator {
     
-    private int result;
+    protected double result;
 
     public void add(int a,int b){
         long temp= (long)a + (long)b;
@@ -21,7 +21,19 @@ public class StandardCalculator {
         result= a-b;
     }
 
-    public int getResult(){
+    public void multiply(int a,int b){
+        long temp=(long)a*(long)b;
+        if(temp>Integer.MAX_VALUE){
+            throw new ArithmeticException();
+        }
+        result=a*b;
+    }
+
+    public void divide(int a,int b){
+        result=(double)a/(double)b;
+    }
+
+    public double getResult(){
         return this.result;
     }
 
